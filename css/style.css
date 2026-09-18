@@ -209,25 +209,11 @@ p { margin: 0; }
 .frame-placeholder {
   position: relative;
   width: 100%;
-  min-height: 340px;
   aspect-ratio: 4 / 5;
-  border: 1.5px dashed rgba(10, 10, 11, 0.25);
   border-radius: var(--radius-md);
-  background: repeating-linear-gradient(135deg, rgba(10,10,11,0.03) 0 12px, transparent 12px 24px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--gray);
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  padding: 24px;
   overflow: hidden;
 }
 
-/* Quando a foto real for inserida no lugar do placeholder, aplicar esta classe
-   para que a imagem preencha a moldura corretamente (ex.: class="frame-placeholder__img") */
 .frame-placeholder__img {
   width: 100%;
   height: 100%;
@@ -828,19 +814,12 @@ p { margin: 0; }
 
 .gallery__item {
   aspect-ratio: 1 / 1;
-  border: 1.5px dashed rgba(10,10,11,0.2);
   border-radius: var(--radius-sm);
-  background: repeating-linear-gradient(135deg, rgba(10,10,11,0.03) 0 12px, transparent 12px 24px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray);
-  font-size: 0.8rem;
-  font-weight: 600;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.gallery__item:hover { transform: translateY(-5px); border-color: var(--yellow-deep); color: var(--yellow-deep); }
-.gallery__item img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); }
+.gallery__item:hover { transform: translateY(-5px); }
+.gallery__item img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); display: block; }
 
 .lightbox {
   position: fixed;
@@ -854,16 +833,13 @@ p { margin: 0; }
 .lightbox[hidden] { display: none; }
 
 .lightbox__content {
-  max-width: min(90vw, 800px);
-  max-height: 80vh;
-  color: var(--gray-light);
-  border: 1.5px dashed rgba(242,183,5,0.4);
-  border-radius: var(--radius-md);
-  padding: 60px;
-  text-align: center;
-  font-weight: 600;
+  max-width: min(92vw, 900px);
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.lightbox__content img { max-width: 100%; max-height: 80vh; border-radius: var(--radius-sm); }
+.lightbox__content img { max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; border-radius: var(--radius-md); display: block; }
 
 .lightbox__close, .lightbox__nav {
   position: absolute;
