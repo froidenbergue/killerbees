@@ -1110,6 +1110,7 @@ p { margin: 0; }
 
   .footer__inner { grid-template-columns: 1fr; gap: 32px; }
   .footer .container { padding-left: 40px; }
+  .footer__contacts { margin-bottom: 28px; }
   .footer__bottom { padding: 24px 0 44px; }
 
   .whatsapp-float { bottom: 18px; right: 18px; }
