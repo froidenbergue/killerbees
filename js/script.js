@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
   const navbarNav = document.getElementById('navbarNav');
   const navOverlay = document.getElementById('navOverlay');
+  const navClose = document.getElementById('navClose');
 
   function openMenu() {
     navbarNav.classList.add('is-open');
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   navOverlay.addEventListener('click', closeMenu);
+  navClose.addEventListener('click', closeMenu);
 
   /* Fecha o menu ao clicar em qualquer link de navegação */
   document.querySelectorAll('.nav-link, .navbar__nav .navbar__cta').forEach(link => {
